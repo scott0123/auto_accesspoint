@@ -26,14 +26,14 @@ ifconfig uap0 up
 
 # Start hostapd. 10-second sleep avoids some race condition, apparently. It may not need to be that long. (?)
 echo "Starting hostapd service..."
-systemctl start hostapd.service
+systemctl start hostapd
 sleep 10
 
 #Start dhcpcd. Again, a 5-second sleep
 echo "Starting dhcpcd service..."
-systemctl start dhcpcd.service
+systemctl start dhcpcd
 sleep 5
 
 echo "Starting dnsmasq service..."
-systemctl start dnsmasq.service
+systemctl restart dnsmasq
 echo "auto_accesspoint DONE"
