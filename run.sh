@@ -35,5 +35,5 @@ systemctl start dhcpcd
 sleep 5
 
 echo "Starting dnsmasq service..."
-systemctl restart dnsmasq
+systemctl start dnsmasq
 echo "auto_accesspoint DONE"
