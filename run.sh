@@ -5,9 +5,6 @@ echo "Stopping network services (if running)..."
 systemctl stop hostapd
 systemctl stop dnsmasq
 systemctl stop dhcpcd
-systemctl disable hostapd
-systemctl disable dnsmasq
-systemctl disable dhcpcd
 
 #Make sure no uap0 interface exists (this generates an error; we could probably use an if statement to check if it exists first)
 echo "Removing uap0 interface..."
